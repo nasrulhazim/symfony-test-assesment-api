@@ -41,6 +41,6 @@ class RegisterController extends AbstractController
         return $this->json([
             'username' => $user->getUsername(),
             'email' => $user->getEmail()
-        ], 201);
+        ], JsonResponse::HTTP_CREATED);
     }
 }
