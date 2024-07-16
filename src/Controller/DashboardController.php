@@ -8,6 +8,9 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Http\Attribute\CurrentUser;
 
+/**
+ * @OA\Tag(name="Dashboard")
+ */
 #[Route('/api', name: 'api_')]
 class DashboardController extends AbstractController
 {
