@@ -22,10 +22,9 @@ class RecommendationProcessor
      */
     private $userId;
 
-    public function __construct(EntityManagerInterface $em, $userId)
+    public function __construct(EntityManagerInterface $em)
     {
         $this->em = $em;
-        $this->userId = $userId;
     }
 
     /**
@@ -83,6 +82,13 @@ class RecommendationProcessor
         }
 
         return $productAttributes;
+    }
+
+    public function setUserId($userId): self
+    {
+        $this->userId = $userId;
+
+        return $this;
     }
 
     public function getUserId()
